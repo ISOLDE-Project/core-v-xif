@@ -1,0 +1,14 @@
+# Copyleft 2024
+# Solderpad Hardware License, Version 0.51, see LICENSE for details.
+# SPDX-License-Identifier: SHL-0.51
+package:
+  name: isolde_cv_x_if
+  authors:
+    - daro <daro@tsr>
+
+sources:
+  files:   
+
+    - target: redmule_test_complex
+      files:
+        - rtl/isolde_cv_x_if.sv
