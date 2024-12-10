@@ -10,9 +10,15 @@ filesets:
     files:
       - rtl/isolde_cv_x_if.sv
     file_type: systemVerilogSource
+  files_sim:
+    files:
+      - tb/xif_monitor_cpu_issue.sv
+    file_type: systemVerilogSource
 
 
 targets:
   default:
     filesets:
       - files_rtl
+      - files_sim 
+      

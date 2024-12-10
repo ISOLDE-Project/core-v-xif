@@ -9,6 +9,7 @@ package:
 sources:
   files:   
 
-    - target: redmule_test_complex
-      files:
+#    - target: redmule_test_complex
+#      files:
         - rtl/isolde_cv_x_if.sv
+        - tb/xif_monitor_cpu_issue.sv
