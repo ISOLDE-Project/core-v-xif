@@ -17,8 +17,16 @@ filesets:
 
 
 targets:
-  default:
+  default: &default
     filesets:
       - files_rtl
-      - files_sim 
+
+  sim:
+    <<: *default
+    filesets_append:
+      - files_sim
+
+  synth:
+    <<: *default
+
       
