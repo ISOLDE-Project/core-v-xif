@@ -5,11 +5,13 @@ CAPI=2:
 
 name: "isolde:ibex:cv_x_if"
 description: "RISC-V eXtension interface"
+
 filesets:
   files_rtl:
     files:
       - rtl/isolde_cv_x_if.sv
     file_type: systemVerilogSource
+
   files_sim:
     files:
       - tb/xif_monitor_cpu_issue.sv
@@ -17,16 +19,19 @@ filesets:
 
 
 targets:
-  default: &default
+  default:
     filesets:
       - files_rtl
+      - files_sim
 
   sim:
-    <<: *default
-    filesets_append:
+    filesets:
+      - files_rtl
       - files_sim
 
   synth:
-    <<: *default
+    filesets:
+      - files_rtl
+
 
       
