@@ -56,14 +56,14 @@ interface isolde_cv_x_if #(
 
   typedef struct packed {
     logic [31:0] instr;  // Offloaded instruction
-    logic [1:0] mode;  // Privilege level
-    logic [X_ID_WIDTH-1:0] id;  // Identification of the offloaded instruction
+    //logic [1:0] mode;  // Privilege level
+    //logic [X_ID_WIDTH-1:0] id;  // Identification of the offloaded instruction
     logic [X_NUM_RS  -1:0][X_RFR_WIDTH-1:0] rs;        // Register file source operands for the offloaded instruction
     logic [X_NUM_RS  -1:0] rs_valid;  // Validity of the register file source operand(s)
     logic [X_IMM32_OPS  -1:0][31:0] imm32;        // Immediate operands for the offloaded instruction
     logic [X_IMM32_OPS  -1:0] imm32_valid;  // Validity of the immediate operands
-    logic [5:0] ecs;  // Extension Context Status ({mstatus.xs, mstatus.fs, mstatus.vs})
-    logic ecs_valid;  // Validity of the Extension Context Status
+    //logic [5:0] ecs;  // Extension Context Status ({mstatus.xs, mstatus.fs, mstatus.vs})
+    //logic ecs_valid;  // Validity of the Extension Context Status
   } x_issue_req_t;
 
   typedef struct packed {

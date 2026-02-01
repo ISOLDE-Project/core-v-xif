@@ -27,8 +27,8 @@ module xif_monitor_cpu_issue #(
         if (issue_if.issue_valid) begin
             $fwrite(fh, "[Time: %0t] issue_valid: %b, issue_ready: %b\n", $time, issue_if.issue_valid, issue_if.issue_ready);
             $fwrite(fh, "  instr: 0x%h\n", issue_if.issue_req.instr);
-            $fwrite(fh, "  mode: %0b\n", issue_if.issue_req.mode);
-            $fwrite(fh, "  id: %0d\n", issue_if.issue_req.id);
+           // $fwrite(fh, "  mode: %0b\n", issue_if.issue_req.mode);
+            //$fwrite(fh, "  id: %0d\n", issue_if.issue_req.id);
             for (int i = 0; i < issue_if.X_NUM_RS; i++) begin
                 $fwrite(fh, "  rs[%0d]: 0x%h (valid: %b)\n", i, issue_if.issue_req.rs[i], issue_if.issue_req.rs_valid[i]);
             end
@@ -36,7 +36,7 @@ module xif_monitor_cpu_issue #(
             $fwrite(fh, "  imm32[%0d]: 0x%h (valid: %b)\n", i, issue_if.issue_req.imm32[i],
                     issue_if.issue_req.imm32_valid[i]);
             end
-            $fwrite(fh, "  ecs: 0x%h (valid: %b)\n", issue_if.issue_req.ecs, issue_if.issue_req.ecs_valid);
+           // $fwrite(fh, "  ecs: 0x%h (valid: %b)\n", issue_if.issue_req.ecs, issue_if.issue_req.ecs_valid);
         end
     end
 
